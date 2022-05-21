@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  background-color: #FEDCC8;
+}
+
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.parallax {
+  
+}
+
+.no-parallax {
+  background-color: #111;
+  z-index: 999;
+}
+
+// .parallax::after {
+//   content: ' ';
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   // The translateZ should be half of perspective, and the scale = n*0.5 + 1, where n is layer number
+//   transform: translateZ(-1px) scale(1.5);
+//   background-size: 100%;
+//   z-index: -1;
+// }
+
+// .bg::after {
+//   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+//   url('https://picsum.photos/1080/720');
+// }
+
+.parallax-layer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #2D112B;
+  // margin-top: 50vh;
+}
+
+.parallax-layer-1 {
+  transform: translateZ(-2px) scale(2.5);
+}
+
+.parallax-layer-2 {
+  transform: translateZ(-1px) scale(1.5);
+  background-color: cornflowerblue;
+}
+
+.parallax-layer-0 {
+  transform: translateZ(0) scale(1);
+  background-color: lightcoral;
+}
+
+.parallax-text {
+  position: absolute;
+  transform: translateZ(-3px) scale(3.5);
+  top: 200px;
+}
